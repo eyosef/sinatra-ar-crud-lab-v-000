@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
     erb :'edit'
   end
 
-  patch "/update/post/:id" do
+  patch "/update/posts/:id" do
     @post = Post.all
     if @post.includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
