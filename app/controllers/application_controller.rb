@@ -53,11 +53,11 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id/delete' do
 
-    @post = Post.all
-
-    if @post.includes(:name => params[:name], content: params[:content])
-      @post.destroy(:name => params[:name], :content => params[:content])
-    end
+    # @post = Post.all
+    #
+    # if @post.includes(:name => params[:name], content: params[:content])
+    #   @post.destroy(:name => params[:name], :content => params[:content])
+    # end
 
     erb :delete
   end
