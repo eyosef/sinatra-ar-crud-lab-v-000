@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
 
     @post = Post.all
     if @post.includes(:name => params[:name], content: params[:content])
-      @post.update(:name => params[:name], :content => params[:content])
+      @post.delete(:name => params[:name], :content => params[:content])
     end
     
     @post = Post.where(id: params[:id])
