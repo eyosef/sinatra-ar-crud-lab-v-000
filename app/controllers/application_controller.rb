@@ -52,7 +52,6 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/posts/:id/delete' do
-    binding.pry
     # @post = Post.all
     #
     # if @post.includes(:name => params[:name], content: params[:content])
