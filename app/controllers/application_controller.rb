@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
 
   patch "/update" do
     @post = Post.all
-    if @post.includes(:name => params[:name], content: params[:content])
+    if @post.!includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
     end
 
