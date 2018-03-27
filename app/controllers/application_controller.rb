@@ -44,12 +44,12 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/posts/:id" do
+    
+        binding.pry
     @post = Post.all
     if @post.includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
     end
-
-    binding.pry
     redirect to ("/posts/2")
   end
 
