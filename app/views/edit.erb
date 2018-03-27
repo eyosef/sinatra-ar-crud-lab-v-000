@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  <form method="post" action="/posts/:id">
+  <form method="post" action="/posts/<%=@post.id%>">
     <p>Edit Your Blog Post:
       <% @post.each do |info|%>
         <p><%= info.name %></p>
