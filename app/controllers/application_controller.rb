@@ -58,11 +58,6 @@ class ApplicationController < Sinatra::Base
       @post.destroy(:name => params[:name], :content => params[:content])
     end
 
-    @post = Post.where(id: params[:id])
-        binding.pry
-    @name = params[:name]
-    post = Post.find_by(id: @name)
-    post.destroy
     erb :delete
   end
 
