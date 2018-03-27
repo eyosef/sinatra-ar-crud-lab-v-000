@@ -52,7 +52,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id/delete' do
-
     binding.pry
     # @post = Post.all
     #
