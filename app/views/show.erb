@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-  <form method="post" action="/posts/:id/delete">
+  <form method="post" action="/posts/<%#{@post.id}%>/delete">
   <p>Blog Post Names: </p>
   <% @post.each do |info|%>
     <p><%= info.name %></p>
