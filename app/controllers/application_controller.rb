@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
     if @post.includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
     end
-    redirect to ('/posts/2') "#{}" @post.id :id
+    redirect to ('/posts/2') "#{@post.id}" @post.id :id
   end
 
   delete '/posts/:id/delete' do
