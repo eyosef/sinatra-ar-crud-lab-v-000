@@ -48,6 +48,8 @@ class ApplicationController < Sinatra::Base
     if @post.includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
     end
+
+    binding.pry
     redirect to ("/posts/2")
   end
 
