@@ -6,10 +6,8 @@
 <body>
   <form method="post" action="/posts/<%=@post.id%>">
     <p>Edit Your Blog Post:
-      <% @post.each do |info|%>
-        <p><%= info.name %></p>
+        <p><%= @post.name %></p>
         <p><%= info.content %></p>
-      <% end %>
     <input name="_method" id="hidden" type="hidden" value="patch">
     <p><input type="text" name="name"></p>
     <p><input type="text" name="content"></p>
