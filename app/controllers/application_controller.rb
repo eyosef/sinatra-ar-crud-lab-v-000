@@ -45,7 +45,8 @@ class ApplicationController < Sinatra::Base
 
   patch "/posts/:id" do
     binding.pry
-    @post = Post.all
+    @all_post = Post.all
+    
     if @post.includes(:name => params[:name], content: params[:content])
       @post.update(:name => params[:name], :content => params[:content])
     end
