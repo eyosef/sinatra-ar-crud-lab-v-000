@@ -34,6 +34,7 @@ class ApplicationController < Sinatra::Base
 
   get "/posts/:id" do
     @post = Post.where(id: params[:id])
+    binding.pry
     erb :'show'
   end
 
