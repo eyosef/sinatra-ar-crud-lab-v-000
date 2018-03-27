@@ -49,6 +49,7 @@ class ApplicationController < Sinatra::Base
       @post.update(:name => params[:name], :content => params[:content])
     end
 
+    binding.pry
     redirect to ("/posts/2")
   end
 
