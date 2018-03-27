@@ -51,10 +51,6 @@ class ApplicationController < Sinatra::Base
     redirect to ('/posts/2')
   end
 
-  get '/delete' do
-    binding.pry
-  end
-
   delete '/delete' do
     @posts = Post.all
       binding.pry
