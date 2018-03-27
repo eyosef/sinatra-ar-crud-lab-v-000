@@ -57,6 +57,7 @@ class ApplicationController < Sinatra::Base
     if @post.includes(:name => params[:name], content: params[:content])
       @post.destroy(:name => params[:name], :content => params[:content])
     end
+    binding.pry
 
     erb :delete
   end
