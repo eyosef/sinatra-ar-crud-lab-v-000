@@ -13,7 +13,7 @@
     <input name="_method" id="hidden" type="hidden" value="patch">
     <p><input type="text" name="name"></p>
     <p><input type="text" name="content"></p>
-    <a href="/update"><input type="submit" name="submit" id="submit" value="submit"></a>
+    <a href="/posts/<%=@post.id%>"><input type="submit" name="submit" id="submit" value="submit"></a>
     <a href="/posts/:id/delete"><input type="button" name="delete" id="delete" value="delete"></a>
   </form>
 </body>
