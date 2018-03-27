@@ -51,7 +51,7 @@ class ApplicationController < Sinatra::Base
     redirect to ('/posts/2')
   end
 
-  get '/posts/:id/delete' do
+  delete '/posts/:id/delete' do
     binding.pry
     # @post = Post.all
     #
