@@ -59,8 +59,5 @@ class ApplicationController < Sinatra::Base
     end
     erb :delete
   end
-
-  # https://learn.co/tracks/full-stack-web-development-v3/sinatra/activerecord/sinatra-restful-routes
-
-
+  
 end
