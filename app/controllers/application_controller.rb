@@ -44,10 +44,8 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/posts/:id" do
-    binding.pry
     @post = Post.find_by(id: params[:id])
     @post.update(:name => params[:name], :content => params[:content])
-
 
     redirect to ("/posts/#{@post.id}")
   end
